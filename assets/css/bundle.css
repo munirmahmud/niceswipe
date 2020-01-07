@@ -1,0 +1,572 @@
+/*
+    Template Name: NiceSwipe - Bootstrap eCommerce HTML5 Template
+    Description: This is html5 template
+    Author: Munir Mahmud
+    Version: 1.0
+
+*/
+/*================================================
+[  Table of contents  ]
+================================================
+01. General
+02. Page section margin padding 
+03. Section title 1
+04. Section title 2
+05. button
+06. button small
+07. share button
+08. Text color
+09. Input
+10. Extra class
+11. Tool tip
+12. loading
+13. Box Layout
+14. Back to top
+15. Basic margin padding
+ 
+======================================
+Color Variation
+======================================*/
+:root {
+    --brand: #f15a24;
+    --grayf6: #f6f6f6;
+}
+
+/*--------------------------------------------------
+    GENERAL
+--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,600,700,800|Pacifico|Playfair+Display:400,700,900');
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    color:#686868;
+    line-height: 24px;
+}
+a, .btn, button, img {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.img, img{
+    max-width: 100%;
+    transition: all 0.3s ease-out 0s;
+}
+.btn {
+    border-radius: 0px;
+    font-size: 14px;
+    padding: 0px 15px;
+    height: 30px;
+    line-height: 30px;
+}
+a:focus,
+.btn:focus {
+    text-decoration: none;
+    outline: none;
+}
+a:focus, a:hover {
+  color: var(--brand);
+  text-decoration: none;
+}
+a,
+button,
+input {
+    outline: medium none;
+    color: #686868;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #3e3e3e;
+    font-style: normal;
+    font-weight: 700;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a { 
+    color: inherit 
+}
+h1 {
+    font-size: 46px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 37px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 22px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 16px;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+*::-moz-selection {
+    background: #4fc1f0;
+    color: #fff;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: #4fc1f0;
+    color: #fff;
+    text-shadow: none;
+}
+::selection {
+    background: #4fc1f0;
+    color: #fff;
+    text-shadow: none;
+}
+.bg-gray {
+    background-color: var(--grayf6);
+}
+
+/*--------------------------------------------------------------
+    TRANSITION
+---------------------------------------------------------------*/
+.share ul,
+.share:hover ul,
+a.button::after,
+a.button-small::after {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+a.button-border span,
+a.button-border-white span,
+input,
+select,
+textarea {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+/*------------------------------------------------
+    SECTION HEADING
+-------------------------------------------------*/
+.section-title h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.section-title.text-white h3 {
+  color: var(--white);
+}
+
+/*------------------------------------------------
+    BUTTON
+------------------------------------------------*/
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #9c9c9c;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #9c9c9c;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  overflow: hidden;
+  padding: 12px 30px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/*------------------------------------------------
+    SOCIAL ICONS
+------------------------------------------------*/
+.socials li {
+    display: inline-block;
+}
+.socials li:not(:last-child) {
+    margin-right: 10px;
+}
+.socials li a {
+    color: #585858;
+    text-align: center;
+    display: block;
+}
+.socials.border-round li a {
+    border: 1px solid #3f3f3f;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.socials.border-round li a:hover {
+    background: var(--brand); 
+    border-color: var(--brand);
+    color: var(--white);
+}
+/*------------ Square -----------*/
+.socials.btn-square li:not(:last-child) {
+    margin-right: 6px;
+}
+.socials.btn-square li a {
+    background: #f6f6f6;
+    color: #262626;
+    font-size: 20px;
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+}
+.socials.btn-square li a:hover {
+    background: var(--brand);
+    color: var(--white);
+}
+.socials li a:hover {
+    color: var(--brand);
+}
+
+/*------------------------------------------------
+    INPUT
+------------------------------------------------*/
+input {
+    background: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    box-shadow: none;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #8e8d8d;
+    width: 100%;
+    height: 45px;
+}
+select {
+    width: 100%;
+    background: #eceff8;
+    border: 2px solid #eceff8;
+    height: 45px;
+    padding-left: 10px;
+    box-shadow: none;
+    font-size: 14px;
+    color: #8e8d8d;
+}
+option {
+    background: #fff;
+    border: 0px solid #626262;
+    padding-left: 10px;
+    font-size: 14px;
+}
+input:focus {
+    background: transparent;
+    border: 2px solid #4FC1F0;
+}
+textarea {
+    resize: vertical;
+    background: #f1f1f1;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    width: 100%;
+    font-size: 14px;
+}
+textarea:focus {
+    background: transparent;
+    outline: none;
+}
+::-moz-placeholder {
+    color: #444;
+}
+.input-group.divcenter.input-group .form-control { padding-left: 0px }
+
+/*------------------------------------------------
+    BACK TO TOP
+------------------------------------------------*/
+#back-to-top .top {
+    z-index: 999;
+    position: fixed;
+    margin: 0px;
+    color: #fff;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    bottom: 105px;
+    right: 15px;
+    border-radius: 3px;
+    z-index: 999;
+    background: transparent;
+    font-size: 14px;
+    background: #4FC1F0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+}
+#back-to-top .top:hover {
+    color: #fff;
+    height: 50px;
+}
+#back-to-top .top { background: #007da1; }
+
+/*-----------------------------------------------------------------
+    MARGIN TOP (0 - 100)
+------------------------------------------------------------------*/
+.mt-0, .my-0 { margin-top: 0 }
+.mt-10, .my-10 { margin-top: 10px }
+.mt-15, .my-15 { margin-top: 15px }
+.mt-20, .my-20 { margin-top: 20px }
+.mt-25, .my-25 { margin-top: 25px }
+.mt-30, .my-30 { margin-top: 30px }
+.mt-40, .my-40 { margin-top: 40px }
+.mt-50, .my-50 { margin-top: 50px }
+.mt-60, .my-60 { margin-top: 60px }
+.mt-70, .my-70 { margin-top: 70px }
+.mt-80, .my-80 { margin-top: 80px }
+.mt-90, .my-90{ margin-top: 90px }
+.mt-100, .my-100{ margin-top: 100px }
+
+/*-----------------------------------------------------------------
+    MARGIN RIGHT (0 - 100)
+-----------------------------------------------------------------*/
+.mr-0, .mx-0 { margin-right: 0px }
+.mr-10, .mx-10 { margin-right: 10px }
+.mr-15, .mx-15 { margin-right: 15px }
+.mr-20, .mx-20 { margin-right: 20px }
+.mr-30, .mx-30 { margin-right: 30px }
+.mr-35, .mx-35 { margin-right: 35px }
+.mr-40, .mx-40 { margin-right: 40px }
+.mr-50, .mx-50 { margin-right: 50px }
+.mr-60, .mx-60 { margin-right: 60px }
+.mr-70, .mx-70 { margin-right: 70px }
+.mr-80, .mx-80 { margin-right: 80px }
+.mr-90, .mx-90 { margin-right: 90px }
+.mr-100, .mx-100 { margin-right: 100px }
+
+/*-----------------------------------------------------------------
+    MARGIN BOTTOM (0 - 100)
+------------------------------------------------------------------*/
+.mb-0, .my-0 { margin-bottom: 0 }
+.mb-10, .my-10 { margin-bottom: 10px }
+.mb-15, .my-15 { margin-bottom: 15px }
+.mb-20, .my-20 { margin-bottom: 20px }
+.mb-25, .my-25 { margin-bottom: 25px }
+.mb-30, .my-30 { margin-bottom: 30px }
+.mb-35, .my-35 { margin-bottom: 35px }
+.mb-40, .my-40 { margin-bottom: 40px }
+.mb-45, .my-45 { margin-bottom: 45px }
+.mb-50, .my-50 { margin-bottom: 50px }
+.mb-55, .my-55 { margin-bottom: 55px }
+.mb-60, .my-60 { margin-bottom: 60px }
+.mb-65, .my-65 { margin-bottom: 65px }
+.mb-70, .my-70 { margin-bottom: 70px }
+.mb-80, .my-80 { margin-bottom: 80px }
+.mb-90, .my-90 { margin-bottom: 90px }
+.mb-100, .my-100 { margin-bottom: 100px }
+
+/*-----------------------------------------------------------------
+    MARGIN LEFT (0 - 100)
+-------------------------------------------------------------------*/
+.ml-0, .mx-0 { margin-left: 0 }
+.ml-10, .mx-10 { margin-left: 10px }
+.ml-15, .mx-15 { margin-left: 15px }
+.ml-20, .mx-20 { margin-left: 20px }
+.ml-25, .mx-25 { margin-left: 25px }
+.ml-30, .mx-30 { margin-left: 30px }
+.ml-40, .mx-40 { margin-left: 40px }
+.ml-50, .mx-50 { margin-left: 50px }
+.ml-60, .mx-60 { margin-left: 60px }
+.ml-70, .mx-70 { margin-left: 70px }
+.ml-80, .mx-80 { margin-left: 80px }
+.ml-90, .mx-90 { margin-left: 90px }
+.ml-100, .mx-100 { margin-left: 100px }
+
+/*-----------------------------------------------------------------
+    PADDING TOP (0 -100)
+-------------------------------------------------------------------*/
+.pt-0, .py-0 { padding-top: 0 }
+.pt-10, .py-10 { padding-top: 10px }
+.pt-15, .py-15 { padding-top: 15px }
+.pt-20, .py-20 { padding-top: 20px }
+.pt-30, .py-30 { padding-top: 30px }
+.pt-40, .py-40 { padding-top: 40px }
+.pt-50, .py-50 { padding-top: 50px }
+.pt-55, .py-55 { padding-top: 55px }
+.pt-60, .py-60 { padding-top: 60px }
+.pt-65, .py-65 { padding-top: 65px }
+.pt-70, .py-70 { padding-top: 70px }
+.pt-75, .py-75 { padding-top: 75px }
+.pt-80, .py-80 { padding-top: 80px }
+.pt-85, .py-85 { padding-top: 85px }
+.pt-90, .py-90 { padding-top: 90px }
+.pt-95, .py-95 { padding-top: 95px }
+.pt-100, .py-100 { padding-top: 100px }
+.pt-105, .py-105 { padding-top: 105px }
+.pt-110, .py-110 { padding-top: 110px }
+.pt-120, .py-120 { padding-top: 120px }
+
+/*-----------------------------------------------------------------
+    PADDING RIGHT (0 - 100)
+-----------------------------------------------------------------*/
+.pr-0, .px-0 { padding-right: 0 }
+.pr-10, .px-10 { padding-right: 10px }
+.pr-15, .px-15 { padding-right: 15px }
+.pr-20, .px-20 { padding-right: 20px }
+.pr-30, .px-30 { padding-right: 30px }
+.pr-40, .px-40 { padding-right: 40px }
+.pr-50, .px-50 { padding-right: 50px }
+.pr-60, .px-60 { padding-right: 60px }
+.pr-70, .px-70 { padding-right: 70px }
+.pr-80, .px-80 { padding-right: 80px }
+.pr-90, .px-90 { padding-right: 90px }
+.pr-100, .px-100 { padding-right: 100px }
+
+/*-----------------------------------------------------------------
+    PADDING BOTTOM (0 - 120)
+/*-----------------------------------------------------------------*/
+.pb-0, .py-0 { padding-bottom: 0 }
+.pb-5, .py-5 { padding-bottom: 5px }
+.pb-10, .py-10 { padding-bottom: 10px }
+.pb-15, .py-15 { padding-bottom: 15px }
+.pb-20, .py-20 { padding-bottom: 20px }
+.pb-30, .py-30 { padding-bottom: 30px }
+.pb-40, .py-40 { padding-bottom: 40px }
+.pb-45, .py-45 { padding-bottom: 45px }
+.pb-50, .py-50 { padding-bottom: 50px }
+.pb-60, .py-60 { padding-bottom: 60px }
+.pb-65, .py-65 { padding-bottom: 65px }
+.pb-70, .py-70 { padding-bottom: 70px }
+.pb-80, .py-80 { padding-bottom: 80px }
+.pb-85, .py-85 { padding-bottom: 85px }
+.pb-90, .py-90 { padding-bottom: 90px }
+.pb-95, .py-95 { padding-bottom: 95px }
+.pb-100, .py-100 { padding-bottom: 100px }
+.pb-105, .py-105 { padding-bottom: 105px }
+.pb-110, .py-110 { padding-bottom: 110px }
+.pb-115, .py-115 { padding-bottom: 115px }
+.pb-120, .py-120 { padding-bottom: 120px }
+
+/*-----------------------------------------------------------------
+    PADDING LEFT (0 - 120)
+-----------------------------------------------------------------*/
+.pl-0, .px-0 { padding-left: 0 }
+.pl-10, .px-10 { padding-left: 10px }
+.pl-15, .px-15 { padding-left: 15px }
+.pl-20, .px-20 { padding-left: 20px }
+.pl-30, .px-30 { padding-left: 30px }
+.pl-40, .px-40 { padding-left: 40px }
+.pl-50, .px-50 { padding-left: 50px }
+.pl-60, .px-60 { padding-left: 60px }
+.pl-70, .px-70 { padding-left: 70px }
+.pl-80, .px-80 { padding-left: 80px }
+.pl-90, .px-90 { padding-left: 90px }
+.pl-100, .px-100 { padding-left: 100px }
+.pl-110, .px-110 { padding-left: 110px }
+.pl-120, .px-120 { padding-left: 120px }
+
+/*-----------------------------------------------------------------
+    Background variation set 
+ -------------------------------------------------------------------*/
+/*colored background*/
+ .black-bg { background: #252525 }
+ .gray-bg { background: #f5f5f5; }
+ .gray-bg-2 { background: #f1f1f1; }
+ .gray-bg-3 { background: #e5e9ea; }
+ .gray-bg-4 { background: #f4f4f4; }
+ .gray-bg-5 { background: #f0f0f0; }
+ .gray-bg-6 { background: #f3f3f3; }
+ .theme-bg { background: #2a68fc;}
+ .blue-bg { background: #4FC1F0; }
+ .default-bg { background: #50C1F0; }
+ .transparent-bg { background: transparent; }
+
+/*-------------------------------------------------- 
+    OVERLAY BLACK
+----------------------------------------------------*/
+[data-overlay] {
+  position: relative;
+} 
+[data-overlay]::before {
+  background: #252525 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+[data-overlay="3"]::before {
+  opacity: 0.3;
+}
+[data-overlay="4"]::before {
+  opacity: 0.4;
+}
+[data-overlay="5"]::before {
+  opacity: 0.5;
+}
+[data-overlay="56"]::before {
+  opacity: 0.56;
+}
+[data-overlay="6"]::before {
+  opacity: 0.6;
+}
+[data-overlay="7"]::before {
+  opacity: 0.7;
+}
+[data-overlay="8"]::before {
+  opacity: 0.8;
+}
+
+/*--------------------------------------------------
+    IMAGE BACKGROUND
+--------------------------------------------------*/
+ .bg-1, .bg-2, .bg-3, .bg-4, .bg-5, .bg-6, .bg-7, .bg-8, .bg-9, .bg-10{
+    background-clip: initial;
+    background-color: rgba(0, 0, 0, 0); 
+    z-index: 0;
+ }
+ .bg-1 {
+  background: url(../../images/bg/1.jpg);}
+ .bg-2 { background: url(../../images/bg/2.jpg);}
+ .bg-3 { background: url(../../images/bg/3.jpg);}
+ .bg-4 { background: url(../../images/bg/4.jpg);}
+ .bg-5 { background: url(../../images/bg/5.jpg);}
+ .bg-6 { background: url(../../images/bg/6.jpg);}
+ .bg-7 { background: url(../../images/bg/7.jpg);}
+ .bg-8 { background: url(../../images/bg/8.jpg);}
+ .bg-9 { background: url(../../images/bg/9.jpg);}
+ .bg-10 { background: url(../../images/bg/10.jpg);}
+
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+.bg-fixed {
+    background-attachment: fixed; 
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+:focus {
+    outline: -mos-focus-ring-color auto 0px;
+}
+button:focus {
+  outline: none;
+}
