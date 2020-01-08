@@ -532,10 +532,13 @@
 }
 
 /* banner */
-.banner-content-position1 {
-  left: 0;
+.banner-content {
+  right: 0;
   padding: 30px 25px;
-  top: 0;
+  top: 50%;
+  height: 100%;
+  width: 60%;
+  transform: translateY(-36%);
 }
 .banner-content > h3 {
   color: #000000;
@@ -550,38 +553,6 @@
 .banner-content > p {
   color: #000000;
   margin: 0;
-}
-.banner-content-position2 {
-  padding: 78px 75px 50px;
-  right: 0;
-  top: 0;
-}
-.banner-content-position2 > span {
-  color: #000000;
-  font-size: 16px;
-  font-style: italic;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  margin-bottom: 2px;
-}
-
-.banner-content.banner-content-position2 > h3 {
-  position: relative;
-  padding-bottom: 18px;
-}
-.banner-content.banner-content-position2 > h3:before {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 2px;
-  background-color: #a8a5a5;
-  bottom: 0;
-  left: 0;
-}
-.banner-content-position3 {
-  bottom: 0;
-  left: 0;
-  padding: 30px 25px 27px;
 }
 
 /* section title */
@@ -979,7 +950,7 @@
   font-size: 14px;
   height: 43px;
   padding-left: 20px;
-  background: rgba(0, 0, 0, 0) url("../img/icon-img/1.png") no-repeat scroll right 20px center;
+  background: rgba(0, 0, 0, 0) url("../img/icons/5.png") no-repeat scroll right 20px center;
 }
 select::-ms-expand {
     display: none;
@@ -1349,7 +1320,7 @@ Header Banner
 }
 .shop-selector select {
   -moz-appearance: none;
-  background: rgba(0, 0, 0, 0) url("../img/icon-img/12.png") no-repeat scroll right 0 center;
+  background: rgba(0, 0, 0, 0) url("../img/icons/5.png") no-repeat scroll right 0 center;
   border: medium none;
   box-shadow: none;
   color: #090909;
