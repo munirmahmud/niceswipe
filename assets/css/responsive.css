@@ -105,6 +105,13 @@
     
 }
 
+@media (min-width: 992px) and (max-width: 1300px) {
+  .banner-area .col-lg-4 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
 .social-network > a {
@@ -115,17 +122,7 @@
 }
 .tagcloud li a {
   padding: 11px 9px;
-}
-
-.banner-content-position1 {
-  padding: 30px 9px;
-}    
-.banner-content-position2 {
-  padding: 46px 60px 30px;
-}    
-.banner-content-position3 {
-  padding: 30px 9px 27px;
-}    
+}   
 .clickable-mainmenu-btn {
   top: 175px;
 }    
@@ -486,10 +483,7 @@
 }    
 .menu-search-cart .header-search-cart {
   margin-top: 0px;
-} 
-.banner-content3-position1 {
-  padding: 11px 35px;
-}    
+}   
 .common-banner-style-3 > h2 {
   font-size: 30px;
   line-height: 35px;
@@ -807,14 +801,7 @@
 }    
 .slider-btn-style {
   padding: 13px 30px 14px;
-}    
-   
-.banner-content-position2 {
-  padding: 10px 12px;
-}    
-.banner-content.banner-content-position2 > p {
-  display: none;
-}    
+}       
 .clickable-mainmenu-btn {
   top: 106px;
     
@@ -1290,6 +1277,9 @@ p.checkout-coupon input[type="text"] {
 }
 .text-leave button.submit {
   margin-bottom: 40px;
+}
+.banner-item img{
+  width: 100%;
 }
  
 }
