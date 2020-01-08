@@ -950,7 +950,7 @@
   font-size: 14px;
   height: 43px;
   padding-left: 20px;
-  background: rgba(0, 0, 0, 0) url("../img/icons/5.png") no-repeat scroll right 20px center;
+  background: rgba(0, 0, 0, 0) url("../images/icons/5.png") no-repeat scroll right 20px center;
 }
 select::-ms-expand {
     display: none;
@@ -1045,13 +1045,8 @@ input.qty-box {
 }
 
 /* --------------------------------------------------------
-Header Banner
+MAIN MENU
 ----------------------------------------------------------*/
-.breadcrumb-area {
-  min-height: 500px;
-}
-
-/* main-menu */
 .main-menu ul li {
   margin: 0 19px;
   position: relative;
@@ -1184,33 +1179,44 @@ Header Banner
   height: 101px;
 }
 
-/*------- Breadcrumb -------------*/
+/* --------------------------------------------------------
+BREADCRUMB
+----------------------------------------------------------*/
+.breadcrumb-area {
+  min-height: 500px;
+}
+.breadcrumb-content {
+  z-index: 10;
+  position: relative;
+}
 .shop-listview-sidebar {
   padding: 0 145px;
 }
+.breadcrumb-content h2, 
+.breadcrumb-content ul li,
+.breadcrumb-content ul li a {
+  color: var(--white);
+}
 .breadcrumb-content h2 {
-  color: #585858;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 16px;
   text-transform: capitalize;
 }
 .breadcrumb-content li {
-  color: #585858;
   display: inline-block;
   font-weight: 600;
   text-transform: uppercase;
 }
 .breadcrumb-content li a {
-  color: #7c7c7c;
   position: relative;
   padding-right: 18px;
 }
 .breadcrumb-content li a:hover {
-  color: var(--brand);
+  color: var(--gray-dark);
 }
 .breadcrumb-content li a:after {
-  background-color: #7c7c7c;
+  background-color: var(--white);
   content: "";
   font-size: 8px;
   height: 1px;
@@ -1320,7 +1326,7 @@ Header Banner
 }
 .shop-selector select {
   -moz-appearance: none;
-  background: rgba(0, 0, 0, 0) url("../img/icons/5.png") no-repeat scroll right 0 center;
+  background: rgba(0, 0, 0, 0) url("../images/icons/5.png") no-repeat scroll right 0 center;
   border: medium none;
   box-shadow: none;
   color: #090909;
@@ -1399,7 +1405,7 @@ Header Banner
   color: #6c6c6c;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .sidebar-search form {
   position: relative;
@@ -1514,7 +1520,7 @@ Header Banner
   float: right;
 }
 .sidebar-widget li:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 }
 
 .product-color > ul li {
@@ -1575,6 +1581,10 @@ Header Banner
   font-weight: 600;
   margin: 0;
 }
+.top-rated-rating {
+  line-height: 1;
+  margin: 9px 0 0px;
+}
 .top-rated-rating li {
   display: inline-block;
 }
@@ -1597,10 +1607,6 @@ Header Banner
 }
 .top-rated-text {
   margin-left: 20px;
-}
-.top-rated-rating {
-  line-height: 1;
-  margin: 9px 0 10px;
 }
 .sidebar-load {
   padding-top: 7px;

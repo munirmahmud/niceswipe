@@ -95,13 +95,7 @@
 }      
 .breadcrumb-area {
   background-position: 29% center;
-}   
-.popup_container {
-  padding: 50px 50px;
-  width: 75%;
-  top: 50%;
-  transform: translateY(-50%);
-}     
+}        
     
 }
 
@@ -362,14 +356,7 @@
 }     
 .subscribe-form-group input {
   width: 100%;
-} 
-.popup_container {
-  padding: 50px 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 75%;
-}    
-
+}
     
 }
 
@@ -413,10 +400,7 @@
 }  
 .pr-155 {
   padding-right: 30px;
-}    
-.header-area-2 {
-  padding: 30px 0;
-}    
+}       
 .slider-position-images {
   right: 30px;
   width: 300px;
@@ -426,19 +410,13 @@
 }
 .footer-widget-r-content.f-right {
   float: left;
-}   
-.header-area-2 .header-search-cart {
-  margin-right: 50px;
-}   
+}    
 .mean-container a.meanmenu-reveal {
   border: 1px solid #666;
   height: 18px;
   line-height: 1;
   top: -29px;
 }    
-.header-area-2 .header-sidebar.common-style {
-  display: none;
-}   
 .menu-none-block {
   display: none;
 }    
@@ -746,13 +724,7 @@
 }  
 .subscribe-form-group input {
   width: 100%;
-}     
-.popup_container {
-  padding: 20px 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 80%;
-}    
+}        
 .subscribe_area h2 {
   font-size: 25px;
 }    
@@ -768,12 +740,19 @@
   padding: 13px 35px;
   width: inherit;
 }
+.popup_container {
+  width: 80%;
+}
     
 }
 
  
 /* small mobile :320px. */
 @media (max-width: 767px) {
+.popup_container {
+  width: 80%;
+  padding: 20px;
+}
 .sidebar-search-input {
   padding: 160px 0 0;
 }
@@ -886,34 +865,19 @@
   padding: 0 0 7px;
 } 
 .slinky-theme-default .back::before {
-  background: rgba(0, 0, 0, 0) url("../img/icon-img/14.png") no-repeat scroll center center / 30px auto;
+  background: rgba(0, 0, 0, 0) url("../images/icons/4.png") no-repeat scroll center center / 30px auto;
   height: 30px;
   width: 30px;
-}
-.header-area-2 .header-search-cart {
-  margin-right: 50px;
 }   
 .mean-container a.meanmenu-reveal {
   border: 1px solid #666;
   height: 18px;
   line-height: 1;
   top: -29px;
-}    
-.header-area-2 .header-sidebar.common-style {
-  display: none;
-}   
+}     
 .menu-none-block {
   display: none;
-}    
- .pl-155 {
-  padding-left: 15px;
 }  
-.pr-155 {
-  padding-right: 15px;
-}    
-.header-area-2 {
-  padding: 30px 0;
-}    
 .slider-position-images {
   display: none;
 }   
@@ -1257,19 +1221,13 @@ p.checkout-coupon input[type="text"] {
   padding-right: 15px;
   width: 100%;
 }    
-.popup_container {
-  padding: 20px 30px;
-  top: 50px;
-}    
+  
 .subscribe_area h2 {
   font-size: 25px;
 }    
 .subscribe-form-group button {
   height: 44px;
   line-height: 40px;
-} 
-.popup_container {
-  width: 100%;
 }    
 .submit_btn input {
   width: inherit;
