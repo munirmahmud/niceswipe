@@ -1230,8 +1230,13 @@ BREADCRUMB
 }
 
 /*---------- About us ----------*/
-.about-story-img {
-  padding-left: 35px;
+.about-story-img img:first-child {
+  margin-top: 100px;
+}
+.about-story-img img:last-child {
+  position: absolute;
+  z-index: -1;
+  right: 0;
 }
 .story-title {
   color: #585858;
@@ -1249,12 +1254,6 @@ BREADCRUMB
 }
 .story-paragraph:last-child {
   margin-bottom: 0px;
-}
-.about-story-img > img:last-child {
-  margin-left: 20px;
-}
-.about-story {
-  padding-right: 28px;
 }
 .section-title-others > h2 {
   color: #585858;
@@ -1292,7 +1291,9 @@ BREADCRUMB
           transform: translate(-50%, -50%);
   width: 115px;
 }
-
+.owl-carousel .owl-item .single-logo img {
+  width: auto;
+}
 
 /*------------- Shop grid view ----------*/
 .shop-found-selector {

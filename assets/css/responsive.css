@@ -11,13 +11,6 @@
   right: 50px;
   width: 500px;
 }    
-    
-.pl-155 {
-  padding-left: 95px;
-}    
-.pr-155 {
-  padding-right: 95px;
-} 
 .sidebar-style {
   width: 350px;
 }    
@@ -594,10 +587,7 @@
   justify-content: flex-start;
   margin-top: 50px;
   padding-left: 0;
-}    
-.about-story-img > img {
-  width: 100%;
-}    
+}        
 .your-order {
   margin-top: 50px;
 }   
@@ -1047,10 +1037,7 @@
   margin-top: 50px;
   padding-left: 0;
   flex-direction: column;
-}
-.about-story-img > img {
-  width: 100%;
-}  
+} 
 .about-story-img > img:last-child {
   margin-top: 30px;
   margin-left: 0;
@@ -1238,6 +1225,10 @@ p.checkout-coupon input[type="text"] {
 }
 .banner-item img{
   width: 100%;
+}
+
+.about-story-img img:first-child {
+  margin-top: 0;
 }
  
 }
