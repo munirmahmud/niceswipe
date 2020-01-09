@@ -410,9 +410,16 @@
   line-height: 1;
   top: -29px;
 }    
-.menu-none-block {
-  display: none;
-}    
+.header-area .menu-none-block {
+  display: none !important;
+}   
+.header-area {
+  padding: 34px 0;
+}
+.header-area .header-search-cart {
+  justify-content: flex-end !important;
+  margin-right: 50px;
+}
 .banner-content-4 {
   padding: 20px 12px;
 }    
@@ -742,6 +749,16 @@
 .popup_container {
   width: 80%;
   padding: 20px;
+}
+.header-area .menu-none-block {
+  display: none !important;
+}   
+.header-area {
+  padding: 34px 0;
+}
+.header-area .header-search-cart {
+  justify-content: flex-end !important;
+  margin-right: 50px;
 }
 .sidebar-search-input {
   padding: 160px 0 0;

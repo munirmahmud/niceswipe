@@ -364,6 +364,14 @@
         });
     };
     sidebarMainmenu();
+
+
+    // Grab the element
+    let scrollSticky = document.querySelector(".scroll-sticky-header");
+    // Instance of Headroom and pass the element
+    let headroom  = new Headroom(scrollSticky);
+    // initialise
+    headroom.init(); 
     
     
     /*--------------------------

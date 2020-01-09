@@ -1279,8 +1279,8 @@ BREADCRUMB
   color: #8f8f8f;
 }
 .video-popup {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #353030;
+  background-color: var(--brand);
+  color: var(--white);
   font-size: 68px;
   height: 70px;
   line-height: 70px;
@@ -1290,6 +1290,10 @@ BREADCRUMB
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 115px;
+}
+.video-popup:hover {
+  background-color: var(--white);
+  color: var(--brand);
 }
 .owl-carousel .owl-item .single-logo img {
   width: auto;
@@ -2020,14 +2024,17 @@ h1.cart-heading {
   line-height: 40px;
   text-align: center;
   width: 40px;
+  border: 1px solid transparent;
+  transition: all 0.4s;
 }
 .table-content table .product-price .amount {
   color: #555;
   font-size: 15px;
 }
-
 .table-content table td.product-remove i:hover {
   color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 50%;
 }
 .table-content table td.product-quantity {
   width: 180px;
