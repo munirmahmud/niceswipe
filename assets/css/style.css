@@ -2451,13 +2451,14 @@ h5.panel-title {
 }
 .login-form-container input[type="checkbox"] {
   height: 15px;
-  margin: 0;
   position: relative;
   top: 1px;
   width: 17px;
+  cursor: pointer;
 }
 .login-form-container label {
   color: #777;
+  cursor: pointer;
 }
 .login-toggle-btn > a {
   color: #777;
