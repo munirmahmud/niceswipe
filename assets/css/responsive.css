@@ -795,6 +795,9 @@
 .slinky-menu.slinky-theme-default {
   width: 208px;
 }    
+.single-blog .post-thubnail img {
+  width: 100%;
+}
 .product-tab-list a {
   margin: 0 8px 10px;
 }    
