@@ -2742,12 +2742,8 @@ h3.leave-comment-text {
   height: 402px;
   width: 100%;
 }
-.contact-map {
-  margin-top: 65px;
-}
 
 /*-------- ScrollUp --------*/
-
 #scrollUp {
   background: var(--brand);
   bottom: 85px;
