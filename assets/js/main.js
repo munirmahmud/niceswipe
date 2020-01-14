@@ -1,14 +1,16 @@
 (function($) {
     "use strict";
-
     
-    // Background Image
+
+    /*--------------------------
+    Background Image
+    ---------------------------*/
     $("[data-bg]").each( function(){
 		$(this).css("background-image", "url(" + $(this).attr('data-bg') +")")
 	});
     
     /*--------------------------
-    2. Newsletter Popup
+    Newsletter Popup
     ---------------------------*/
     setTimeout(function () {
         $('.popup_wrapper').css({
@@ -20,15 +22,19 @@
         })
     }, 1000);
     
-    
-    /* jQuery MeanMenu */
+
+    /*--------------------------
+    jQuery MeanMenu
+    ---------------------------*/
     $('#mobile-menu-active').meanmenu({
         meanScreenWidth: "991",
         meanMenuContainer: ".mobile-menu-area .mobile-menu",
     });
     
     
-    /*====== sidebarCart ======*/
+    /*--------------------------
+    sidebarCart
+    ---------------------------*/
     function sidebarCart() {
         let menuTrigger = $('button.sidebar-trigger'),
             endTrigger = $('button.op-sidebar-close'),
@@ -54,7 +60,9 @@
     sidebarCart();
     
     
-    /*====== sidebarSearch ======*/
+    /*--------------------------
+    sidebarSearch 
+    ---------------------------*/
     function sidebarSearch() {
         let searchTrigger = $('button.sidebar-trigger-search'),
             endTriggersearch = $('button.search-close'),
@@ -72,7 +80,9 @@
     sidebarSearch();
     
     
-    /*====== sidebarCart ======*/
+    /*--------------------------
+    sidebarCart
+    ---------------------------*/
     function sidebarNav() {
         let navbarTrigger = $('button.header-navbar-active'),
             endTrigger = $('button.op-sidebar-close'),
@@ -98,7 +108,9 @@
     };
     sidebarNav();
     
-    /* slider active */
+    /*--------------------------
+    Slider
+    ---------------------------*/
     $('.slider-active').owlCarousel({
         loop: true,
         nav: false,
@@ -121,7 +133,9 @@
     })
     
     
-    /* testimonial active */
+    /*--------------------------
+    Testimonial
+    ---------------------------*/
     $('.testimonial-active').owlCarousel({
         loop: true,
         autoplay: true,
@@ -141,7 +155,9 @@
         }
     })
     
-    /* brand logo active */
+    /*--------------------------
+    Brand Logo Carousel
+    ---------------------------*/
     $('.brand-logo-active').owlCarousel({
         loop: true,
         nav: false,
@@ -168,7 +184,9 @@
         }
     })
     
-    /* product slider active */
+    /*--------------------------
+    Product Carousel
+    ---------------------------*/
     $('.product-slider-active').owlCarousel({
         loop: true,
         nav: false,
@@ -187,28 +205,7 @@
                 items: 4
             }
         }
-    })
-    
-    /* new collection slider active */
-    $('.new-collection-slider').owlCarousel({
-        loop: true,
-        nav: false,
-        item: 4,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            },
-            1200: {
-                items: 4
-            }
-        }
-    })
+    });
     
     
     /*----------------------------
@@ -233,7 +230,7 @@
     });
     
     
-    /*--
+    /*----------------------------------
     Smooth Scroll
     -----------------------------------*/
     $('.scroll-top').on('click', function(e) {
@@ -245,27 +242,15 @@
         });
     });
     
-    
-    /*---------------------
-        countdown
-      --------------------- */
-    $('[data-countdown]').each(function() {
-        let $this = $(this),
-            finalDate = $(this).data('countdown');
-        $this.countdown(finalDate, function(event) {
-            $this.html(event.strftime('<span class="cdown day">%-D <p>Days</p></span> <span class="cdown hour">%-H <p>Hour</p></span> <span class="cdown minutes">%M <p>Min</p></span class="cdown second"> <span>%S <p>Sec</p></span>'));
-        });
-    });
-    
-    
-    /* magnificPopup video popup */
+    /*--------------------------
+    MagnificPopup Video 
+    ---------------------------*/
     $('.video-popup').magnificPopup({
         type: 'iframe'
     });
     
-    
     /*---------------------
-    price slider
+    Price Slider
     --------------------- */
     let sliderrange = $('#slider-range');
     let amountprice = $('#amount');
@@ -282,33 +267,6 @@
         amountprice.val("$" + sliderrange.slider("values", 0) +
             " - $" + sliderrange.slider("values", 1));
     });
-    
-    
-    // Instantiate EasyZoom instances
-    let $easyzoom = $('.easyzoom').easyZoom();
-    
-    /*---------------------
-    sidebar sticky
-    --------------------- */
-    $('.sidebar-active').stickySidebar({
-        topSpacing: 80,
-        bottomSpacing: 30,
-        minWidth: 991,
-    });
-    
-    $('.sidebar-active1').stickySidebar({
-        topSpacing: 80,
-        bottomSpacing: 30,
-        minWidth: 991,
-    });
-    
-    $('.sidebar-active3').stickySidebar({
-        topSpacing: 80,
-        bottomSpacing: 30,
-        minWidth: 991,
-    });
-    
-    
     
     /*---------------------
         filter active
@@ -348,7 +306,9 @@
     const slinky = $('#menu').slinky()
     
     
-    /*====== sidebarCart ======*/
+    /*----------------------------
+        Sidebar Cart    
+    ------------------------------*/
     function sidebarMainmenu() {
         let menuTrigger = $('.clickable-mainmenu-active'),
             endTrigger = $('button.clickable-mainmenu-close'),
@@ -363,16 +323,7 @@
             container.removeClass('inside');
         });
     };
-    sidebarMainmenu();
-
-
-    // Grab the element
-    let scrollSticky = document.querySelector(".scroll-sticky-header");
-    // Instance of Headroom and pass the element
-    let headroom  = new Headroom(scrollSticky);
-    // initialise
-    headroom.init(); 
-    
+    sidebarMainmenu();    
     
     /*--------------------------
      ScrollUp

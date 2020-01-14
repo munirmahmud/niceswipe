@@ -230,14 +230,7 @@
 }    
 .product-details-6.pr-70.pro-stick {
   padding-right: 0;
-}    
-  
-.sidebar-active3 .quickview-plus-minus {
-  display: block;
-}    
-.sidebar-active3.sidebar-details7 .quickview-btn-cart {
-  margin: 20px 0 0;
-}    
+}   
 .single-details-gallery {
   flex: 0 0 210px;
   margin-right: 20px;
@@ -517,9 +510,6 @@
 .description-review-text .tab-pane p {
   width: 93%;
 }    
-.product-details-img-content .easyzoom {
-  display: block;
-}    
 .product-details-small a > img {
   width: 160px;
 }    
@@ -545,10 +535,7 @@
 }     
 .product-details-4.pr-70 {
   padding-right: 0;
-}   
-.product-details-4 .easyzoom {
-  display: block;
-}   
+}    
     
 .product-details-4 {
   margin-bottom: 50px;
@@ -569,24 +556,14 @@
      
 .product-details-6 {
   margin-bottom: 50px;
-}    
-.product-details-6 .easyzoom {
-  display: block;
-}    
-.sidebar-active1.product-details7-content {
-  margin-bottom: 50px;
-}   
- .product-details-gallery.pr-70 {
+}
+.product-details-gallery.pr-70 {
   padding-right: 0;
 }      
  .single-details-gallery {
   flex: 0 0 320px;
      max-width: 320px;
-}   
- .easyzoom {
-  display: block;
-  position: relative;
-}   
+}
 .details-9-content .product-details-content > p {
   width: 89%;
 }        
@@ -989,11 +966,7 @@
 }    
  .description-review-title {
   margin-bottom: 20px;
-}   
-.product-details-btn {
-  left: 15px;
-  margin-top: -50px;
-}    
+}      
 .breadcrumb-content-2 > ul li {
   font-size: 14px;
 }    
@@ -1019,10 +992,7 @@
 }
 .inner-wrapper-sticky > h3 {
   font-size: 20px;
-}    
-.sidebar-active1.product-details7-content {
-  margin-bottom: 50px;
-}   
+}      
  .product-details-gallery.pr-70 {
   padding-right: 0;
 }      
@@ -1031,17 +1001,11 @@
      max-width: 100%;
      float: inherit;
 }   
- .single-details-gallery .easyzoom {
-  display: block;
-}   
 .single-details-gallery.mr-20 {
   margin-right: 0;
 }    
 .details-9-content .product-details-content > p {
   width: 100%;
-}   
-.product-details-9 .product-details-btn {
-  margin-top: -55px;
 }
 .breadcrumb-content h2 {
   font-size: 30px;

@@ -357,12 +357,19 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/slinky.min.js"></script>
     <script src="assets/js/ajax-mail.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Grab the element
+        let scrollSticky = document.querySelector(".scroll-sticky-header");
+        // Instance of Headroom and pass the element
+        let headroom  = new Headroom(scrollSticky);
+        // initialise
+        headroom.init(); 
+    </script>
 </body>
 </html>

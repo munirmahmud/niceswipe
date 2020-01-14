@@ -100,26 +100,6 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 
 
 
-
-
-
-/* img zoom */
-
-/*!
- * @name        easyzoom
- * @author      Matt Hinchliffe <>
- * @modified    Tuesday, February 14th, 2017
- * @version     2.5.0
- */!function(a,b){"use strict";"function"==typeof define&&define.amd?define(["jquery"],function(a){b(a)}):"object"==typeof module&&module.exports?module.exports=a.EasyZoom=b(require("jquery")):a.EasyZoom=b(a.jQuery)}(this,function(a){"use strict";function b(b,c){this.$target=a(b),this.opts=a.extend({},i,c,this.$target.data()),void 0===this.isOpen&&this._init()}var c,d,e,f,g,h,i={loadingNotice:"Loading image",errorNotice:"The image could not be loaded",errorDuration:2500,linkAttribute:"href",preventClicks:!0,beforeShow:a.noop,beforeHide:a.noop,onShow:a.noop,onHide:a.noop,onMove:a.noop};b.prototype._init=function(){this.$link=this.$target.find("a"),this.$image=this.$target.find("img"),this.$flyout=a('<div class="easyzoom-flyout" />'),this.$notice=a('<div class="easyzoom-notice" />'),this.$target.on({"mousemove.easyzoom touchmove.easyzoom":a.proxy(this._onMove,this),"mouseleave.easyzoom touchend.easyzoom":a.proxy(this._onLeave,this),"mouseenter.easyzoom touchstart.easyzoom":a.proxy(this._onEnter,this)}),this.opts.preventClicks&&this.$target.on("click.easyzoom",function(a){a.preventDefault()})},b.prototype.show=function(a,b){var g,h,i,j,k=this;if(this.opts.beforeShow.call(this)!==!1){if(!this.isReady)return this._loadImage(this.$link.attr(this.opts.linkAttribute),function(){!k.isMouseOver&&b||k.show(a)});this.$target.append(this.$flyout),g=this.$target.width(),h=this.$target.height(),i=this.$flyout.width(),j=this.$flyout.height(),c=this.$zoom.width()-i,d=this.$zoom.height()-j,c<0&&(c=0),d<0&&(d=0),e=c/g,f=d/h,this.isOpen=!0,this.opts.onShow.call(this),a&&this._move(a)}},b.prototype._onEnter=function(a){var b=a.originalEvent.touches;this.isMouseOver=!0,b&&1!=b.length||(a.preventDefault(),this.show(a,!0))},b.prototype._onMove=function(a){this.isOpen&&(a.preventDefault(),this._move(a))},b.prototype._onLeave=function(){this.isMouseOver=!1,this.isOpen&&this.hide()},b.prototype._onLoad=function(a){a.currentTarget.width&&(this.isReady=!0,this.$notice.detach(),this.$flyout.html(this.$zoom),this.$target.removeClass("is-loading").addClass("is-ready"),a.data.call&&a.data())},b.prototype._onError=function(){var a=this;this.$notice.text(this.opts.errorNotice),this.$target.removeClass("is-loading").addClass("is-error"),this.detachNotice=setTimeout(function(){a.$notice.detach(),a.detachNotice=null},this.opts.errorDuration)},b.prototype._loadImage=function(b,c){var d=new Image;this.$target.addClass("is-loading").append(this.$notice.text(this.opts.loadingNotice)),this.$zoom=a(d).on("error",a.proxy(this._onError,this)).on("load",c,a.proxy(this._onLoad,this)),d.style.position="absolute",d.src=b},b.prototype._move=function(a){if(0===a.type.indexOf("touch")){var b=a.touches||a.originalEvent.touches;g=b[0].pageX,h=b[0].pageY}else g=a.pageX||g,h=a.pageY||h;var i=this.$target.offset(),j=h-i.top,k=g-i.left,l=Math.ceil(j*f),m=Math.ceil(k*e);if(m<0||l<0||m>c||l>d)this.hide();else{var n=l*-1,o=m*-1;this.$zoom.css({top:n,left:o}),this.opts.onMove.call(this,n,o)}},b.prototype.hide=function(){this.isOpen&&this.opts.beforeHide.call(this)!==!1&&(this.$flyout.detach(),this.isOpen=!1,this.opts.onHide.call(this))},b.prototype.swap=function(b,c,d){this.hide(),this.isReady=!1,this.detachNotice&&clearTimeout(this.detachNotice),this.$notice.parent().length&&this.$notice.detach(),this.$target.removeClass("is-loading is-ready is-error"),this.$image.attr({src:b,srcset:a.isArray(d)?d.join():d}),this.$link.attr(this.opts.linkAttribute,c)},b.prototype.teardown=function(){this.hide(),this.$target.off(".easyzoom").removeClass("is-loading is-ready is-error"),this.detachNotice&&clearTimeout(this.detachNotice),delete this.$link,delete this.$zoom,delete this.$image,delete this.$notice,delete this.$flyout,delete this.isOpen,delete this.isReady},a.fn.easyZoom=function(c){return this.each(function(){var d=a.data(this,"easyZoom");d?void 0===d.isOpen&&d._init():a.data(this,"easyZoom",new b(this,c))})}});
-
-
-
-
-
-
-
-
-
 /**
  * sticky-sidebar - A JavaScript plugin for making smart and high performance.
  * @version v3.3.0
@@ -444,26 +424,3 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
  */
 
 !function(a,b){"use strict";"function"==typeof define&&define.amd?define([],b):"object"==typeof exports?module.exports=b():a.Headroom=b()}(this,function(){"use strict";function a(a){this.callback=a,this.ticking=!1}function b(a){return a&&"undefined"!=typeof window&&(a===window||a.nodeType)}function c(a){if(arguments.length<=0)throw new Error("Missing arguments in extend function");var d,e,f=a||{};for(e=1;e<arguments.length;e++){var g=arguments[e]||{};for(d in g)"object"!=typeof f[d]||b(f[d])?f[d]=f[d]||g[d]:f[d]=c(f[d],g[d])}return f}function d(a){return a===Object(a)?a:{down:a,up:a}}function e(a,b){b=c(b,e.options),this.lastKnownScrollY=0,this.elem=a,this.tolerance=d(b.tolerance),this.classes=b.classes,this.offset=b.offset,this.scroller=b.scroller,this.initialised=!1,this.onPin=b.onPin,this.onUnpin=b.onUnpin,this.onTop=b.onTop,this.onNotTop=b.onNotTop,this.onBottom=b.onBottom,this.onNotBottom=b.onNotBottom}var f={bind:!!function(){}.bind,classList:"classList"in document.documentElement,rAF:!!(window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame)};return window.requestAnimationFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame,a.prototype={constructor:a,update:function(){this.callback&&this.callback(),this.ticking=!1},requestTick:function(){this.ticking||(requestAnimationFrame(this.rafCallback||(this.rafCallback=this.update.bind(this))),this.ticking=!0)},handleEvent:function(){this.requestTick()}},e.prototype={constructor:e,init:function(){return e.cutsTheMustard?(this.debouncer=new a(this.update.bind(this)),this.elem.classList.add(this.classes.initial),setTimeout(this.attachEvent.bind(this),100),this):void 0},destroy:function(){var a=this.classes;this.initialised=!1,this.elem.classList.remove(a.unpinned,a.pinned,a.top,a.notTop,a.initial),this.scroller.removeEventListener("scroll",this.debouncer,!1)},attachEvent:function(){this.initialised||(this.lastKnownScrollY=this.getScrollY(),this.initialised=!0,this.scroller.addEventListener("scroll",this.debouncer,!1),this.debouncer.handleEvent())},unpin:function(){var a=this.elem.classList,b=this.classes;!a.contains(b.pinned)&&a.contains(b.unpinned)||(a.add(b.unpinned),a.remove(b.pinned),this.onUnpin&&this.onUnpin.call(this))},pin:function(){var a=this.elem.classList,b=this.classes;a.contains(b.unpinned)&&(a.remove(b.unpinned),a.add(b.pinned),this.onPin&&this.onPin.call(this))},top:function(){var a=this.elem.classList,b=this.classes;a.contains(b.top)||(a.add(b.top),a.remove(b.notTop),this.onTop&&this.onTop.call(this))},notTop:function(){var a=this.elem.classList,b=this.classes;a.contains(b.notTop)||(a.add(b.notTop),a.remove(b.top),this.onNotTop&&this.onNotTop.call(this))},bottom:function(){var a=this.elem.classList,b=this.classes;a.contains(b.bottom)||(a.add(b.bottom),a.remove(b.notBottom),this.onBottom&&this.onBottom.call(this))},notBottom:function(){var a=this.elem.classList,b=this.classes;a.contains(b.notBottom)||(a.add(b.notBottom),a.remove(b.bottom),this.onNotBottom&&this.onNotBottom.call(this))},getScrollY:function(){return void 0!==this.scroller.pageYOffset?this.scroller.pageYOffset:void 0!==this.scroller.scrollTop?this.scroller.scrollTop:(document.documentElement||document.body.parentNode||document.body).scrollTop},getViewportHeight:function(){return window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight},getElementPhysicalHeight:function(a){return Math.max(a.offsetHeight,a.clientHeight)},getScrollerPhysicalHeight:function(){return this.scroller===window||this.scroller===document.body?this.getViewportHeight():this.getElementPhysicalHeight(this.scroller)},getDocumentHeight:function(){var a=document.body,b=document.documentElement;return Math.max(a.scrollHeight,b.scrollHeight,a.offsetHeight,b.offsetHeight,a.clientHeight,b.clientHeight)},getElementHeight:function(a){return Math.max(a.scrollHeight,a.offsetHeight,a.clientHeight)},getScrollerHeight:function(){return this.scroller===window||this.scroller===document.body?this.getDocumentHeight():this.getElementHeight(this.scroller)},isOutOfBounds:function(a){var b=0>a,c=a+this.getScrollerPhysicalHeight()>this.getScrollerHeight();return b||c},toleranceExceeded:function(a,b){return Math.abs(a-this.lastKnownScrollY)>=this.tolerance[b]},shouldUnpin:function(a,b){var c=a>this.lastKnownScrollY,d=a>=this.offset;return c&&d&&b},shouldPin:function(a,b){var c=a<this.lastKnownScrollY,d=a<=this.offset;return c&&b||d},update:function(){var a=this.getScrollY(),b=a>this.lastKnownScrollY?"down":"up",c=this.toleranceExceeded(a,b);this.isOutOfBounds(a)||(a<=this.offset?this.top():this.notTop(),a+this.getViewportHeight()>=this.getScrollerHeight()?this.bottom():this.notBottom(),this.shouldUnpin(a,c)?this.unpin():this.shouldPin(a,c)&&this.pin(),this.lastKnownScrollY=a)}},e.options={tolerance:{up:0,down:0},offset:0,scroller:window,classes:{pinned:"headroom--pinned",unpinned:"headroom--unpinned",top:"headroom--top",notTop:"headroom--not-top",bottom:"headroom--bottom",notBottom:"headroom--not-bottom",initial:"headroom"}},e.cutsTheMustard="undefined"!=typeof f&&f.rAF&&f.bind&&f.classList,e});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
